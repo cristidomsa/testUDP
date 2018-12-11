@@ -1,0 +1,29 @@
+<iperf run="iperf" timeout="20">
+	<Throughput name="Throughput" criteria="8">
+		<c>localhost</c>
+        <u name="udp"> </u>
+        <b name="bandwidth">1G</b>
+	</Throughput>
+	<PacketLossRate name="Packet loss rate" criteria="0.0">
+        <c>localhost</c>
+		<u name="udp"></u>
+		<b name="bandwidth">10G</b>
+		<l name="length">8900</l>
+		<P name="parallel"></P>
+	</PacketLossRate>
+	<BandwidthUtilization name="Bandwidth utilization" criteria="0.8">
+        <c>localhost</c>
+        <u name="udp"> </u>
+        <b name="bandwidth">1G</b>
+    </BandwidthUtilization>
+	<Jitter name="Jitter" criteria="0">
+        <c>localhost</c>
+        <u name="udp"> </u>
+        <b name="bandwidth">1G</b>
+    </Jitter>
+    <E2EDelay name="E2E delay" criteria="0.3"> 
+        <udp></udp>
+        <dest-ip>127.0.0.1</dest-ip>
+        <p>5001</p>
+    </E2EDelay>
+</iperf>
