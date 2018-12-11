@@ -7,9 +7,11 @@ Server:
 Client:
 
 Run all tests:
+    
     python Iperf.py -x file.xml
 
 Run one category test (Jitter)
+    
     python Iperf.py -x file.xml -t Jitter
 
 
